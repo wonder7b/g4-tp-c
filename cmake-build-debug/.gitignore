@@ -1,0 +1,4 @@
+.cmake/
+CMakeFiles/
+Testing/
+build.ninja
