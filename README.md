@@ -38,6 +38,30 @@ suivantes :
          assurer la cohérence des données (ex. : un guide indisponible ne peut être affecté à
          une visite).
 ****
+# Diagramme des modules
+```mermaid
+graph TD
+    A[main.c<br>Point d'entrée,<br>boucle du menu] --> B[visiteur.h/.c<br>Logique Visiteur]
+    A --> C[guide.h/.c<br>Logique Guide]
+    A --> D[fonctions.h/.c<br>Logique Métier]
+
+    B --> E[utils.h/.c<br>Fonctions Utilitaires]
+    C --> E
+    D --> E
+
+    E --> F[structures.h<br>Définition des Données]
+
+    %% Styles améliorés
+    style A fill:#ffcccc,stroke:#cc0000,color:#000
+    style B fill:#99f2ff,stroke:#0099cc,color:#000
+    style C fill:#b3d9ff,stroke:#0066cc,color:#000
+    style D fill:#a0f2c1,stroke:#009966,color:#000
+    style E fill:#fff5b3,stroke:#e6b800,color:#000
+    style F fill:#d9e0e6,stroke:#999999,color:#000
+```
+
+
+****
 # Plan de Travail
 ****
 ...
